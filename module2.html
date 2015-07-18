@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Curso JavaScript y jQuery Intensivo</title>
+  <title>Offline First</title>
 
   <meta name="description" content="">
   <meta name="author" content="https://twitter.com/ianaya89">
@@ -33,956 +33,159 @@
     <div class="slides">
 
       <section>
-        <h2>Módulo 2: El Lenguage</h2>
+        <h2>Offline First</h2>
         <ul>
-          <li>Variables</li>
-          <li>Operadores</li>
-          <li>Estructuras Condicionales</li>
-          <li>Estructuras Cíclicas</li>
-          <li>Funciones</li>
-          <li>POO</li>
-          <li>Estructuras de Datos</li>
-          <li>Tips de Sinxtaxis</li>
+          <li>Que es y Para Que?</li>
+          <li>Qué es JavaScript?</li>
+          <li>Qué NO es JavaScript?</li>
+          <li>Características</li>
+          <li>Para que sirve JavaScript?</li>
+          <li>Que NO se puede hacer con JavaScript?</li>
+        </ul>
+      </section> 
+
+      <section>
+        <h2>Que es y Para Que?</h2>
+        <p>
+          No es estar online NO es un error, es un estado.
+          Necesitamos diseñar para esta experiencia.
+        </p>
+        <p>
+          Pensar que podemos ofrecer al usuario cuando este offline.
+        </p>
+        <ul>
+          <li>UX</li>
+          <li>Seguridad</li>
+          <li>Performance</li>
+        </ul>
+        <a href="https://medium.com/user-experience-design-1/offline-93c2f8396124">Articulo</a>
+      </section>
+
+      <section>
+        <h2>Como?</h2>
+        <ul>
+          <li>Separar data</li>
+          <li>Servir data</li>
+          <li>Guardar data offline</li>
+          <li>Detectar conexion</li>
+          <li>Sincronizar informacion</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Herramientas</h3>
+        <ul>
+          <li>Browser storage (local y session)</li>
+          <li>app.cache</li>
+          <li>Service workers</li>
+          <li>Houde.ie</li>
+          <li>PouchDB</li>
+        </ul>
+        
+      </section>
+
+      <section>
+        <pre>
+          <code>
+            navigator.onLine
+          </code>
+        </pre>
+      </section>
+
+      <section>
+        <h3>JScript</h3>
+        <ul>
+          <li>Microsoft crea JScript, su "propio" lenguage client side para su browser Internet Explorer</li>
+          <li>Netscape decide normalizar el lenguage a traves de ECMA</li>
+          <li>Se crea la especificacion ECMAScript</li>
+        </ul>
+        <img src="img/module1/gates.jpg" alt="">
+      </section>
+
+      <section>
+        <h3>ECMAScript</h3>
+        <ul>
+          <li>Estandarización y especificación para un lenguage de script multiplataforma e independiente.</li>
+          <li>Version 1: 1997</li>
+          <li>Version 5: 2009 (Actual)</li>
+          <li>Version 6: Se espera para mediados de 2015</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Qué es JavaScript?</h2>
+        <iframe src="//giphy.com/embed/lELRD773cY7Sg?html5=true" width="480" height="258" frameBorder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+      </section>
+
+      <section>
+        <h3>El Lenguage del Browser?</h3>
+        <ul>
+          <li>Antiguamente era el lenguage del browser, hoy podemos encontrarlo en en el servidor y hasta en Base de Datos.</li> 
+          <li>Es un lenguage de script, interpretado y multiplataforma</li>
+          <li>Nos enfocaremos en Client Side JavaScript</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Client Side JavaScript</h3>
+        <p>Se ejecuta e intrepreta en el browser.</p>
+        <p>Nos proporciona objetos para controlar e interactuar con el browser y con el <b>DOM.</b></p>
+        <p>Nos permite agregar dinamismo e interactuar con nuestros sitios o aplicaciones web.</p>
+      </section>
+
+      <section>
+        <h2>Qué NO es JavaScript?</h2>
+        <img src="img/module1/ham.png" alt="ham-hamburger" style="background-color: white">
+      </section>
+
+      <section>
+        <h3>NO es:</h3>
+        <ul>
+          <li>JAVA</li>
+          <li>Flash</li>
+          <li>jQuery</li>
+          <li>AJAX</li>
         </ul>
         <br>
-      </section>    
-
-      <section>
-        <h2>Variables</h2>
-        <p>Es un contenedor para un valor. Se declaran por medio de la palabra clave <i>var</i> pero no se indica el tipo de dato.</p>
-        <p>Una misma variable puede almacenar diferentes tipo de datos (no simultaneamente) durante su ciclo de vida.</p>
-        <pre>
-          <code>
-            var num = 15;
-            var chars = 'cat';
-            var char2 = 'dog;'
-            var $ = 'jQuery';
-            var _ = 'underscore';
-
-            /* Ejemplos no permitidos
-
-            var -temp = 'some value';
-            var 2num = 2;
-
-            */
-          </code>
-        </pre>
-        <small>Los nombres usados para variables pueden contener letras, numeros, '_' y '$', pero deben comenzar con <b>letras, '_' o '$'</b>.</small>
+        <img src="img/gifs/no.gif" alt="no">
       </section>
 
       <section>
-        <h2>Tipos de Datos Primitivos</h2>
+        <h2>Características</h2>
         <ul>
-          <li>Number</li>
-          <li>String</li>
-          <li>Boolean</li>
-          <li>null</li>
-          <li>undefined</li>
+          <li>Liviano</li>
+          <li>Interpretado (NO se compila)</li>
+          <li>Orientado a Objetos (No use clases, usa protitpos)</li>
+          <li>Multiplataforma</li>
+          <li>Tipado Dinámico</li>
+          <li>Sinxtaxis simple, similar a JAVA, C, C#</li>
         </ul>
       </section>
 
       <section>
-        <h3>Number</h3>
-        <p>No se distinguen entre enteros y decimales.</p>
-        <pre>
-          <code>
-            var x = 6,
-            var y = 3;
-            var z = -7;
-
-            var pi = 3.14;
-
-            var sums = x + y; // 9
-            var mult = x * y; // 18
-            var divs = x / y; // 2
-          </code>
-        </pre>
+        <h2>Para que sirve JavaScript?</h2>
         <ul>
-          <li>
-            <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Math" target="_blank">Math(): </a> <span>objecto que tiene propiedades y métodos para constantes y funciones matemáticas.</span>
-          </li>
-        </ul>
-      </section>
+         <li>Interactuar con el DOM, modificar y manejar HTML y CSS</li>
+         <li>Interceptar y maniuplar eventos de usuario y del browser</li>
+         <li>Cambiar contenido (Sin necesidad de refresh)</li>
+         <li>Manipular cookies y almacenar informacion en el browser</li>
+         <li>Efectos, transiciones, animaciones</li>
+         <li>Validar formularios</li>
+         <li>Peticiones AJAX</li>
+         <li>Aplicaciones Web Mediana y Altamente Complejas (SPA)</li>
+         <li>Integrar APIS de Terceros (Facebook, Twitter, GitHub)</li>
+         <li>Y muho mas...</li>
+       </ul>
+     </section>
 
       <section>
-        <h3>String</h3>
-        <p>Son cadenas de caracteres que representan texto.</p>
-        <p>No hay un tipo de dato char (es un string de longitud 1).</p>
-        <pre>
-          <code>
-            var a = 'Curso',
-            b = 'JavaScript',
-            b2 = "JavaScript";
-            
-            var c = a + ' de ' + b; // 'Curso de JavaScript'
-
-            c.length; //19
-            a.toUpperCase(); // 'CURSO'
-            b.toLowerCase(); // 'javascript'
-          </code>
-        </pre>
+        <h2>Que NO se puede hacer con JavaScript?</h2>
         <ul>
-          <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" target="_blank">MDN:</a>
-          <span> más información sobre metodos para manipular <i>String</i></span></li>
-        </ul>
-      </section>
-
-      <section>
-        <h3>Boolean</h3>
-        <p>Representan 2 valores: <i>true</i> y <i>false</i>.</p>
-        <pre>
-          <code>
-            var a = true,
-            b = false;
-          </code>
-        </pre>
-        <p>Valores <b>falsy</b>, son aquellos valores que son evaluados como <i>false</i> ante un flujo de control.</p>
-        <pre>
-          <code>
-            false;
-            0;
-            '';
-            NaN;
-            null;
-            undefined;
-          </code>
-        </pre>
-      </section>
-
-      <section>
-        <h3>undefined - null</h3>
-        <p><b>NO</b> son lo mismo.</p>
-        <ul>
-          <li><b>undefined</b>: variable que no se le ha asignado valor</li>
-          <li><b>null</b>: no tiene valor o tiene valor nulo</li>
-        </ul>
-        <pre>
-          <code>
-            var a; //undefined
-
-            var b = null;
-          </code>
-        </pre>
-      </section>
-
-      <section>
-        <h2>Operadores</h2>
-        <ul>
-          <li>Asignación</li>
-          <li>Aritméticos</li>
-          <li>Comparación</li>
-          <li>Lógicos</li>
-          <li>Unarios</li>
-        </ul>
-      </section>
-
-      <section>
-        <h3>Asignación</h3>
-        <p>Asigna un valor al operador de la izquierda basado en el valor de la derecha.</p>
-        <pre>
-          <code>
-            var x = 1,
-            y = 2;
-
-            x += y; // x = x + y
-            x -= y; // x = x - y
-            x *= y; // x = x * y
-            x /= y; // x = x / y
-          </code>
-        </pre>
-        <ul>
-          <li>
-            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Conditional_(ternary)_operator" target="_blank">MDN:</a>
-            <span> más información sobre operadores.</span>
-          </li>
-        </ul>
-      </section>
-
-      <section>
-        <h3>Aritméticos</h3>
-        <p>Resuelven operaciones aritmeticas y devuelven valores numericos.</p>
-        <ul>
-          <li>Suma: +</li>
-          <li>Resta: -</li>
-          <li>Multiplicacion: *</li>
-          <li>Division: /</li>
-          <li>Resto: %</li>
-          <li>Incremento: ++</li>
-          <li>Decremento: --</li>
-        </ul>
-      </section>
-
-      <section>
-        <h3>Aritméticos</h3>
-        <pre>
-          <code>
-            var opt = 100 + 4 * 11; // 144
-            var opt2 = (100 + 4) * 11; // 1144
-
-            var opt3 = 10 - 7; // 3
-            var opt4 = 1 - 2 + 1; // 0
-
-            var opt5 = 12 / 3; // 4
-
-            var opt6 = 10 % 2; // 0
-            var opt7 = 11 % 2; // 1
-
-            var opt8++; // opt8 = opt8 + 1;
-            var opt9--; // opt9 = opt9 - 1;
-          </code>
-        </pre>
-      </section>
-
-      <section>
-        <h3>Comparación</h3>
-        <p>Comparan los valores y devuelven un valor logico basado en el resultado de la comparación.</p>
-        <ul>
-          <li>Igual: ==</li>
-          <li>No Igual: !=</li>
-          <li class="red"><b>Estrictamente Igual: ===</b></li>
-          <li class="red"><b>Estrictamente No Igual: !==</b></li>
-          <li>Mayor: ></li>
-          <li>Mayor o Igual: >=</li>
-          <li>Menor: <</li>
-          <li>Menor o Igual: <=</li>
-        </ul>
-      </section>
-
-      <section>
-        <h3>Comparación</h3>
-        <pre>
-          <code>
-            var comp1 = 1 == 1; // true
-            var comp2 = 1 != 1; // false
-
-            var comp3 = 1 == '1'; // true
-            var comp4 = 1 === '1'; // false      
-            var comp5 = 1 !== '1'; // true
-            var comp6 = 1 === 1; // true
-          </code>
-        </pre>
-      </section>
-
-      <section>
-        <h3>Lógicos</h3>
-        <p>Proporcionan valores booleanos (no siempre) al evaluar un determinada condición.</p>
-        <ul>
-          <li>AND</li>
-          <li>OR</li>
-          <li>NOT</li>
-        </ul>
-        <pre>
-          <code>
-            var and1 = true && true; // true
-            var and2 = true && false; // false
-            var and3 = false && true; // false
-            var and4 = false && false; // false
-
-            var or1 = true || true; // true
-            var or2 = true || false; // true
-            var or3 = false || true; // true
-            var or4 = false || false; // false
-
-            var not1 = !true; // false
-            var not2 = !false; // true
-          </code>
-        </pre>
-      </section>
-
-      <section>
-        <h3>Unarios</h3>
-        <p>Operadores que utilizan un solo valor.</p>
-        <ul>
-          <li class="red">typeof</li>
-          <li>delete</li>
-          <li>void</li>
-        </ul>
-        <pre>
-          <code>
-            typeof undefined; // 'undefined'
-            typeof null; // 'object'
-            typeof true; // 'boolean'
-            typeof false; // 'boolean'
-            typeof 'hi'; // 'string'
-            typeof 10 // 'number'
-            typeof 1.6 // 'number'
-          </code>
-        </pre>
-      </section>
-
-      <section>
-        <h2>Estructuras Condicionales</h2>
-        <ul>
-          <li>if - else</li>
-          <li>switch</li>
-        </ul>
-      </section>
-
-      <section>
-        <h3>if - else</h3>
-        <p>
-          Se ejecuta el código definido dentro del bloque <i>if</i> si la condición es verdadera. Si la condición es falsa se ejecutará el código dentro del bloque <i>else</i>.
-        </p>
-        <p>El flujo <i>else</i> puede no existir (es opcional).</p>
-      </section>
-
-      <section>
-        <h3>if - else</h3>
-        <pre>
-          <code>
-            if (true === true) {
-              //...
-            }
-
-            if (1 !== 1) {
-              //...
-            }
-            else {
-              //...
-            }
-
-            var str = 'hi';
-            if (str.length === 2) {
-              //...
-            }
-            else if (str.length === 3) {
-              //...
-            }
-            else {
-              //...
-            }
-          </code>
-        </pre>
-      </section>
-
-      <section>
-        <h3>truthy & falsy</h3>
-        <pre>
-          <code>
-            if (true) { } // true
-            if (1) { } // true
-            if ('some value') { } // true
-
-            if (0) { } // false
-            if (false) { } // false
-            if ('') { } // false
-            if (null) { } // false
-            if (undefined) { } // false
-          </code>
-        </pre>
-      </section>
-
-      <section>
-        <h3>Condicional Ternario</h3>
-        <p><i>condicion ? valor1 : valor2;</i></p>
-        <pre>
-          <code>
-            var ageLimit = 18;
-
-            var status = ageLimit === 18 ? 'adult' : 'minor'; 
-          </code>
-        </pre>
-      </section>
-
-      <section>
-        <h3>switch</h3>
-        <p>Hace comparación estricta de un valor y ejecuta el/los casos que tiene definido/s para ese valor.</p>
-        <pre>
-          <code>
-            var value = 4;
-
-            switch(value) {
-              case 1:
-              //...
-              break;
-
-              case 2:
-              case 4:
-              //...
-              break;
-
-              default: 
-              //...
-            }
-        </code>
-      </pre>
-    </section>
-
-    <section>
-      <h2>Estructuras Ciclicas</h2>
-      <ul>
-        <li>while</li>
-        <li>do-while</li>
-        <li>for</li>
-        <li>for in</li>
-      </ul>
-    </section>
-
-    <section>
-      <h3>while</h3>
-      <p>Se ejecuta mientras la condicion sea verdadera.</p>
-      <pre>
-        <code>
-          var count = 1;
-
-          while (count < 5) {
-            //...
-            count++;
-          }
-        </code>
-      </pre>
-      <small>Tener en cuenta que siempre tenemos que tener condición de quiebre para evitar bucles infinitos.</small>
-    </section>
-
-    <section>
-      <h3>do-while</h3>
-      <p>Se ejecuta mientras la condición sea verdadera, pero se garantiza al menos 1 ejecución.</p>
-      <pre>
-        <code>
-          var count = 6;
-
-          do {
-            //...
-          } while (count < 5)
-        </code>
-      </pre>
-    </section>
-
-    <section>
-      <h3>for</h3>
-      <p>3 partes:</p>
-      <ul>
-        <li>Define el inicio del bucle: <i>var i = 0</i></li>
-        <li>Se establece la condición: <i>i < 10</i></li>
-        <li>Expresión que incrementa un valor: <i>i++</i></li>
-      </ul>
-      <pre>
-        <code>
-          for (var i = 0; i < 10; i++) {
-            //...
-          }
-        </code>
-      </pre>
-    </section>
-
-    <section>
-      <h3>for in</h3>
-      <p>Permite recorrer objetos, arrays o strings a traves de sus propieades.</p>
-      <pre>
-        <code>
-          var str = 'hola',
-          str2 = '';
-
-          for (var s in str) {
-            str2 += s;
-          }
-
-          // str2 = 'hola'
-        </code>
-      </pre>
-    </section>
-
-    <section>
-      <h2>Funciones</h2>
-      <p>Una función es un conjunto de instrucciones que se agrupan para realizar una tarea concreta y que se pueden reutilizar fácilmente.</p>
-      <ul>
-        <li>Nombre la función (opcional)</li>
-        <li>Argumentos de la funcion (opcional)</li>
-        <li>Cuerpo de la funcion</li>
-      </ul>
-      <pre>
-        <code>
-          function add(x, y) {
-            if (x && y ) {
-              return x + y;
-            }
-
-            return 0;
-          }
-
-          add(1, 2); // 3
-        </code>
-      </pre>
-    </section>
-
-    <section>
-      <h3>Funciones como variables y argumentos</h3>
-      <p>Una función puede ser asignada a una variable, e incluso puede ser usada como parametro en otra función. Esto se puede hacer ya que las funciones son objetos.</p>
-      <pre>
-        <code>
-          var add = function(x, y) {
-            if (x && y ) {
-              return x + y;
-            }
-
-            return 0;
-          };
-
-          var increment = function (x) {
-            return x += 1;
-          };
-
-          function addAndIncrement(x, y, add, increment) {
-            var a = add(x, y);
-            var b = increment(a);
-
-            return b;
-          }
-        </code>
-      </pre>
-    </section>
-
-    <section>
-      <h3>Funciones Autoinvocadas</h3>
-      <p>Permite ejecutar una funcion inmediatamente despues de ser definida.</p>
-      <pre>
-        <code>
-          // Función sin parámetros
-          (function load(){
-            //...
-          })();
-
-          // Función con parámetros
-          (function add(x, y){
-            //...
-          })(1, 2);
-        </code>
-      </pre>
-    </section>
-
-    <section>
-      <h3>Hoisting</h3>
-      <p>Independientemente de donde esté la declaración de una variable, ésta es movida al inicio del ámbito al que pertenece (En tiempo de ejecución).</p>
-      <pre>
-        <code>
-          function foo() {
-            alert(x);
-            var x = 10;
-          }
-
-          function foo() {
-            var = x;
-            alert(x);
-            x = 10;
-          }
-        </code>
-      </pre>
-    </section>
-
-    <section>
-      <h3>Scope</h3>
-      <p>Es el ámbito y contexto de una variable.</p>
-      <p>El ámbito de una variable es el lugar dentro de un programa en el cual dicha variable vive y por lo tanto, donde puede ser usada.</p>
-      <p>Significa que una variable definida dentro de una función (con la palabra reservada var) va a poder ser usada dentro de esa función, pero no fuera de la misma.</p>
-      <p>Las variables declaradas fuera de una función (o sin la palabra var) son denomidas globales y seran accesibles en todos lados.</p>
-    </section>
-
-    <section>
-      <h3>Scope</h3>
-      <pre>
-        <code>
-          // Ejemplo 1
-          var value = 'global';
-
-          function showValue() {
-            alert(value); //global;
-          }
-          
-          // Ejemplo 2
-          var value = 'global';
-
-          function showValue() {
-            var value = 'private';
-            alert(value); // private;
-          }
-          
-          // Ejemplo 3
-          function showValue() {
-            var value = 'private';
-            alert(value); // private;
-          }
-
-          alert(value); // ERROR
-        </code>
-      </pre>
-    </section>
-
-    <section>
-      <h3>Closure</h3>
-      <p>En JavaScript podemos definir funciones dentro de otras funciones, pudiendo acceder desde las funciones mas internas al <b>scope</b> de las mas externas (no al reves).</p>
-      <pre>
-        <code>
-          function addAndIncrement(x, y) {
-            var z = x + y;
-
-            function increment() {
-              z += 1;
-            }
-
-            increment();
-
-            return z;            
-          }
-
-          addAndIncrement(5, 5); // 11
-          addAndIncrement(1, 1); // 3         
-        </code>
-      </pre>
-    </section>
-
-    <section>
-    <h3>Closure</h3>
-    <p>Es la capacidad que tienen las funciones de mantener instancias de variables locales vivas (y conservar su estado) despues de haberse ejecutado.</p>
-      <pre>
-        <code>
-          function wrapValue(value) {
-            var localVar = n;
-
-            return function() {
-              return localVar;
-            }
-          }
-
-          var wrap1 = wrapValue(1);
-          var wrap2 = wrapValue(2);
-          
-          wrap1(); // 1
-          wrap2(); // 2
-        </code>
-      </pre>
-    </section>
-
-    <section>
-      <h2>POO</h2>
-      <p>La programación orientada a objetos es un paradigma de programación que utiliza la abstracción para crear modelos basados ​​en el mundo real.</p>
-      <p><b>TODO puede ser representado como objeto</b></p>
-    </section>
-
-    <section>
-      <h3>Características de POO</h3>
-      <ul>
-        <li>Clase / Prototipo</li>
-        <li>Objeto</li>
-        <li>Propiedad</li>
-        <li>Metodo</li>
-        <li>Constructor</li>
-        <li>Herencia</li>
-        <li>Encapsulamiento</li>
-        <li>Abstracción</li>
-        <li>Polimorfismo</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Estructuras de Datos</h2>
-      <ul>
-        <li>Object</li>
-        <li>Array</li>
-      </ul>
-    </section>
-
-    <section>
-      <h3>Object</h3>
-      <ul>
-        <li>Tienen propiedades (caracteristicas) y metodos (comportamiento).</li>
-        <li>Son conjuntos de pares clave-valor.</li>
-        <li>Si no es primitivo, es un objeto.</li>
-        <li>Un objeto puede contener otro objeto.</li>
-        <li>Son Mutables</li>
-      </ul>
-    </section>
-
-    <section>
-      <h3>Instanciación</h3>
-      <pre>
-        <code>
-          // No usar instanciación con new Object().
-
-          // Notación literal.
-          var obj = { 
-            prop1: 'Hello World!',
-            method: function() {
-              //..
-            }
-          };
-
-          obj.prop2 = 'Bye World!';
-        </code>
-      </pre>
-    </section>
-
-    <section>
-      <h3>Acceso a Propiedades</h3>
-      <pre>
-        <code>
-          var Person = {};
-          
-          person.name = 'John';
-          person.id = 14;
-
-          person.sayHello = function() {
-            return 'Hello my name is: ' + this.name;
-          }
-          
-          alert(person.id);
-          alert(person['id']);
-
-          alert(person.sayHello());
-        </code>
-      </pre>
-    </section>
-
-    <section>
-      <h3>Object.prototype</h3>
-      <p>Todos los objetos de JavaScript estan linkeados a un objeto <i>prototype</i>.</p>
-      <p>Nos sirve para definir y luego extender comportamiento hacia otras clases (<b>herencia</b>).</p>
-    </section>
-
-    <section>
-     <h3>Usando Constructores</h3>
-      <pre>
-        <code>
-          var Person = function(name, id) {
-            this.name = name;
-            this.id = id;
-          }
-
-          Person.prototype.sayHello = function() {
-            return 'Hello my name is: ' + this.name;
-          }
-
-          var john = new Person('John', 14);
-          var jane = new Person('Jane', 15);
-
-          alert(john.sayHello());
-          alert(jane.sayHello());
-        </code>
-      </pre>
-    </section>
-
-    <section>
-      <h3>Herencia Pseudoclassical</h3>
-      <pre>
-        <code>
-          // Objeto Padre
-          var Person = function() {
-              this.canTalk = true;
-          };
-
-          // Definicion de metodos
-          Person.prototype.greet = function() {
-            if (this.canTalk) {
-                console.log('Hi');
-            }
-          };
-          
-          // Objeto Hijo 1
-          var Employee = function(name, title) {
-              this.name = name;
-              this.title = title;
-          };
-
-          // Aplicacion de Herencia
-          Employee.prototype = new Person();
-
-          // Definicion de metodos
-          Employee.prototype.greet = function() {
-            if (this.canTalk) {
-                console.log('I am ' + this.name);
-            }
-          };
-  
-          // Objeto Hijo 2
-          var Customer = function(name) {
-              this.name = name;
-          };
-          
-          // Aplicacion de Herencia
-          Customer.prototype = new Person();
-          
-          // Instancias
-          var bob = new Employee('Bob','Constructor');
-          var joe = new Customer('Joe');
-          var rg = new Employee('John','Developer');
-          var mike = new Customer('Mike');
-    
-          bob.greet();
-          joe.greet();
-          rg.greet();
-          mike.greet();
-        </code>
-      </pre>
-    </section>
-
-    <section>
-     <h3>Herencia con Object.create()</h3>
-     <p>No es compatible con IE8</p>
-      <pre>
-        <code>
-          // Objeto Padre
-          var person = {
-              canTalk: true,
-              greet: function() {
-                if (this.canTalk) {
-                  console.log('Hi');
-                }
-              }
-          };
-          
-          // Objeto Hijo
-          var employee = Object.create(person);
-        
-          employee.name = 'Bob';
-          employee.title = 'Constructor';
-          employee.greet();
-        </code>
-      </pre>
-    </section>
-
-    <section>
-      <h2>Array</h2>
-      <p>Estructura de memoria lineal donde los datos son accesibles mediante indices.</p>
-      <p>Son menos eficientes que los arrays de otros lenguages de programacion porque en realidad son objetos.</p>
-      <p>Tanto la longitud del <i>array</i> como sus valores son mutables y el primer indice siempre es es 0.</p>
-    </section>
-
-    <section>
-      <h3>Instanciación</h3>
-      <pre>
-        <code>
-          // No usar instanciación con new Array().
-          
-          // Notación literal.
-          var empty = []; 
-
-          var nums = [1, 2, 3, 4, 5];
-          var chars = ['a', 'b', 'c', 'd'];
-          var mix = [1, 'a', {name: 'John'}, [4, 5, 6]];
-        </code>
-      </pre>
-    </section>
-
-    <section>
-      <h3>Acceso y Métodos</h3>
-      <pre>
-        <code>
-          var nums = [1, 23, 56, 78, 81];
-
-          nums[0]; // 1
-
-          nums.push(99);
-          nums.length; // 6
-
-          nums.pop();
-          nums.length; // 5
-
-          delete nums[2]; // [1, 23, undefined, 78, 81];
-
-          nums.splice(2, 1); [1, 23, 78, 81];
-        </code>
-      </pre>
-      <small>Se puede representar una estructura de pila usando los métodos <i>push()</i> y <i>pop()</i></small>
-      <small>Se puede representar una estructura de cola usando los métodos <i>push()</i> y <i>shift()</i></small>
-      <ul>
-        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">MDN:</a><span> más información sobre <i>Array</i></span></li>
-      </ul>
-    </section>
-
-    <section>
-      <h3>for in - Object y Array</h3>
-      <pre>
-        <code>
-          // Object
-          var person = {
-            name: 'John',
-            lastName: 'Doe',
-            age: 27
-          };
-
-          for (var p in person) {
-            alert(person[p]);
-          }
-  
-          // Array
-          var years = [2010, 2011, 2012, 2013, 2014, 2015];
-
-          for (var y in years) {
-            alert(years[y]);
-          }
-        </code>
-      </pre>
-    </section>
-
-    <section>
-      <h2>Tips de Sintaxis</h2>
-      <ul>
-        <li>No se tienen en cuenta los espacios en blanco ni los saltos de linea (Es importante el indentado)</li>
-        <li>Es Case Sensitive</li>
-        <li>Usamos <i>camelCase</i> (salvo en los constructores)</li>
-        <li>No se define el tipo de dato de las variables</li>
-        <li>No es obligatorio el ';' al final de cada sentencia (Pero usenlo SIEMPRE!!!)</li>
-        <li>Comentarios en linea con // Comentario</li>
-        <li>Comentarios multilinea con /* Comentario */</li>
-        <li>Se pueden usar tanto comillas simples como comillas dobles</li>
-      </ul>
-    </section>
-
-    <section>
-      <h3>Ejemplos</h3>
-      <pre>
-          <code>
-            // Espacios y Saltos de linea
-            function sum(x,y){if(x&&y){return x+y;}return 0;}
-
-            function sum(x, y) {
-              if (x && y) {
-                return x + y;
-              }
-
-              return 0;
-            }
-
-            'hello' !== 'HELLO'; // Case Sensitive
-            person !== Person;
-
-            // Comentario en linea
-
-            /*
-
-              Comentario Multilinea
-
-            */
-
-            'hello' === "hello";
-
-          </code>
-        </pre>
-    </section>
-
-    <section>
-      <h3>Palabras Reservadas</h3>
-      <p>Ninguna de estas palabras puede ser utilizada para nomenclar variables ya que se encuentra reservadas para la sintaxis del lenguage.</p>
-      <pre>
-        <code>
-          break case catch class const continue debugger
-          default delete do else enum export extends false
-          finally for function if implements import in
-          instanceof interface let new null package private
-          protected public return static super switch this
-          throw true try typeof var void while with yield
-        </code>
-      </pre>
-    </section>
-
-      <section>
-        <h2>Bibliografía</h2>
-        <ul>
-          <li><a href="http://www.amazon.com/JavaScript-Good-Parts-Douglas-Crockford/dp/0596517742" target="_blank">"JavaScript: The good parts"</a>, by Douglas Crackford</li>
-          <li><a href="http://effectivejs.com/" target="_blank">"Effective JavaScript"</a>, by David Herman</li>
-          <li><a href="http://www.amazon.com/JavaScript-Definitive-Guide-Activate-Guides/dp/0596805527" target="_blank">"JavaScript: The Definitive Guide, 6th Edition"</a>, by David Flanagan</li>
-          <li><a href="http://eloquentjavascript.net/" target="_blank">"Eloquent JavaScript"</a>, by Marijn Haverbeke</li>
-          <li><a href="https://developer.mozilla.org/en/docs/Web/JavaScript" target="_blank">MDN</a></li>
-          <li><a href="http://librosweb.es/libro/javascript" target="_blank">LibrosWeb</a></li>
+          <li>Escribir archivos en el servidor</li>
+          <li>Acceder a bases de datos</li>
+          <li>Cerrar ventanas que no se hayan abierto el mismo script</li>
+          <li>Acceder a configuraciones del navegador</li>
+          <li>Proteger el codigo</li>
         </ul>
       </section>
 
@@ -993,21 +196,10 @@
     <a href="index.html">Index</a>
   </div>
 
-  <script src="lib/js/head.min.js"></script>
-  <script src="js/reveal.min.js"></script>
+ <script src="lib/js/head.min.js"></script>
+ <script src="js/reveal.min.js"></script>
 
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-41753965-1', 'keepe.rs');
-    ga('send', 'pageview');
-
-  </script>
-
-  <script>
+ <script>
       // Full list of configuration options available here:
       // https://github.com/hakimel/reveal.js#configuration
       Reveal.initialize({
