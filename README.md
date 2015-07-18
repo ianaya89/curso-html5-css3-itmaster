@@ -1,14 +1,19 @@
 # Curso de JavaScript y jQuery Básico - [IT Master][6]
 [6]:http://www.itmaster.com.ar/
 
-Material y diapositivas del curso de JavaScript y jQuery básico de IT Master.
-[Aquí][2] encontraran mas información sobre el curso.
-[2]:http://www.itmaster.com.ar/cursos/curso-javascript-jquery
+<p style="text-align: center">
+  <img src="hyc.png" alt="html5-css3" title="html5-css3"> 
+</p>
+
+Material y diapositivas del curso de HTML5 y CSS3 Avanzado de IT Master.
+
 
 ### Version
 1.0
 
 ### Tecnologías
+* [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS)
+* [HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5)
 * [JavaScript][7]
 * [jQuery][8]
 [7]:https://developer.mozilla.org/es/docs/Web/JavaScript
@@ -29,13 +34,10 @@ Ignacio Anaya
 ### Temario
 
 * Introducción
-* Módulo 2: Las Bases
-* Módulo 2: El Lenguage
-* Módulo 3: El Browser
-* Módulo 4: jQuery
-* Módulo 5: AJAX y REST
-* Módulo 6: El Lenguage
-
-### [Ver Online][5]
-[5]:#
+* Módulo 2: CSS3 Avanzado
+* Módulo 2: Offline First
+* Módulo 3: AJAX y REST
+* Módulo 4: jQuery Pluggins
+* Módulo 5: Debugging
+* Módulo 6: HTML5 Avanzado
 
