@@ -1,4 +1,4 @@
-# Curso de JavaScript y jQuery Básico - [IT Master][6]
+# Curso de HTML5 y CSS3 Avanzado - [IT Master][6]
 [6]:http://www.itmaster.com.ar/
 
 <p style="text-align: center">
