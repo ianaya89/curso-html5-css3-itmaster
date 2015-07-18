@@ -1,0 +1,633 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  
+  <title>Curso CSS3 Avanzado</title>
+
+  <meta name="description" content="">
+  <meta name="author" content="https://twitter.com/ianaya89">
+
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png">
+
+  <link rel="stylesheet" href="css/reveal.min.css">
+  <link rel="stylesheet" href="css/ionic.css">
+  <!-- <link rel="stylesheet" href="css/site.css"> -->
+
+  <!-- For syntax highlighting -->
+  <link rel="stylesheet" href="lib/css/zenburn.css">
+
+  <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+  <script>
+    document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+  </script>
+
+</head>
+
+<body>
+
+  <div class="reveal">
+    <div class="slides">
+
+      <section>
+        <h2>CSS3 Avanzado</h2>
+        <ul>
+          <li>Transformaciones: transform</li>
+          <li>Transiciones: transition</li>
+          <li>Animaciones: animation</li>
+          <li>Tipografias Custom: @font-face</li>
+          <li>RWD: media-query - flexbox</li>
+          <li>Grid Systems</li>
+        </ul>
+      </section> 
+
+      <section>
+        <h2>Transformaciones</h2>
+        <p>
+          Permite modificar el espacio de coordenadas de un elemento HTML.
+        </p>
+        <p>
+          Los elementos pueden ser trasladados, rotados, escalados o sesgados de acuerdo a los valores establecidos.
+        </p>
+        <hr>
+        <a href="http://html5please.com/#transform" target="_blank">HTML Please</a>
+        <br>
+        <a href="http://caniuse.com/#search=transform" target="_blank">Can I Use?</a>
+      </section>
+
+      <section>
+        <h3>Scale</h3>
+        <p>
+          Operación de escalado 2D.
+        </p>
+        <ul>
+          <li>scale(xDeg, [yDeg]);</li>
+          <li>scaleX(xDeg);</li>
+          <li>scaleY(yDeg)</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Sinxtaxis</h3>
+        <pre>
+          <code>
+            .scale {
+              -webkit-transform: scale(2);
+              -moz-transform: scale(2);
+              -ms-transform: scale(2);
+              -o-transform: scale(2);
+              transform: scale(2);
+            }
+
+            .scaleX {
+              -webkit-transform: scaleX(1.5);
+              -moz-transform: scaleX(1.5);
+              -ms-transform: scaleX(1.5);
+              -o-transform: scaleX(1.5);
+              transform: scaleX(1.5);
+            }
+
+            .scaleZ {
+              -webkit-transform: scaleZ(1.2);
+              -moz-transform: scaleZ(1.2);
+              -ms-transform: scaleZ(1.2);
+              -o-transform: scaleZ(1.2);
+              transform: scaleZ(1.2);
+            }
+          </code>
+        </pre>
+        <a href="http://codepen.io/ianaya89/pen/YXjPGM" target="_blank">Live Demo</a>
+      </section>
+
+      <section>
+        <h3>Rotate</h3>
+        <p>
+          Operación de rotación 2D de un elemento que recibe un parametro en <b>deg</b> (rotacion en sentido horario)
+        </p>
+        <ul>
+          <li>rotateX(xDeg);</li>
+          <li>rotateY(yDeg);</li>
+          <li>rotateZ(zDeg) / rotate(deg);</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Sinxtaxis</h3>
+        <pre>
+          <code>
+            .rotateX {
+              -webkit-transform: rotateX(25deg);
+              -moz-transform: rotateX(25deg);
+              -ms-transform: rotateX(25deg);
+              -o-transform: rotateX(25deg);
+              transform: rotateX(25deg);
+            }
+
+            .rotateY {
+              -webkit-transform: rotateY(60deg);
+              -moz-transform: rotateY(60deg);
+              -ms-transform: rotateY(60deg);
+              -o-transform: rotateY(60deg);
+              transform: rotateY(60deg);
+            }
+
+            .rotateZ {
+              -webkit-transform: rotateZ(50deg);
+              -moz-transform: rotateZ(50deg);
+              -ms-transform: rotateZ(50deg);
+              -o-transform: rotateZ(50deg);
+              transform: rotateZ(50deg);
+            }
+          </code>
+        </pre>
+        <a href="http://codepen.io/ianaya89/pen/yNjZRB" target="_blank">Live Demo</a>
+      </section>
+
+      <section>
+        <h3>Skew</h3>
+        <p>
+          Sesga 2D de un elemento que recibe un parametro en <b>deg</b>.
+        </p>
+        <ul>
+          <li>skewX(xDeg);</li>
+          <li>skewY(yDeg);</li>
+          <li>skew(deg); /* Deprecated: NO USAR */</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Sinxtaxis</h3>
+        <pre>
+          <code>
+            .skewX {
+              -webkit-transform: skewX(25deg);
+              -moz-transform: skewX(25deg);
+              -ms-transform: skewX(25deg);
+              -o-transform: skewX(25deg);
+              transform: skewX(25deg);
+            }
+
+            .skewY {
+              -webkit-transform: skewY(60deg);
+              -moz-transform: skewY(60deg);
+              -ms-transform: skewY(60deg);
+              -o-transform: skewY(60deg);
+              transform: skewY(60deg);
+            }
+
+            .skew {
+              -webkit-transform: skewX(25deg) skewY(60deg);
+              -moz-transform: skewX(25deg) skewY(60deg);
+              -ms-transform: skewX(25deg) skewY(60deg);
+              -o-transform: skewX(25deg) skewY(60deg);
+              transform: skewX(25deg) skewY(60deg);
+            }
+          </code>
+        </pre>
+        <a href="http://codepen.io/ianaya89/pen/mJjywb" target="_blank">Live Demo</a>
+      </section>
+
+      <section>
+        <h3>Translate</h3>
+        <p>
+          Especifica una tanslación 2D dada por el vector [tx, ty] representado <b>px</b> o <b>%</b>.
+        </p>
+        <ul>
+          <li>translate(xPx, [yPx]);</li>
+          <li>translateX(xPx);</li>
+          <li>translateY(yPx);</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Sinxtaxis</h3>
+        <pre>
+          <code>
+            .translate {
+              -webkit-transform: translate(20px, 10px);
+              -moz-transform: translate(20px, 10px);
+              -ms-transform: translate(20px, 10px);
+              -o-transform: translate(20px, 10px);
+              transform: translate(20px, 10px);
+            }
+
+            .translateX {
+              -webkit-transform: translateX(100px);
+              -moz-transform: translateX(100px);
+              -ms-transform: translateX(100px);
+              -o-transform: translateX(100px);
+              transform: translateX(100px);
+            }
+
+            .translateY {
+              -webkit-transform: translateY(50px);
+              -moz-transform: translateY(50px);
+              -ms-transform: translateY(50px);
+              -o-transform: translateY(50px);
+              transform: translateY(50px);
+            }
+          </code>
+        </pre>
+        <a href="http://codepen.io/ianaya89/pen/NqBPXd" target="_blank">Live Demo</a>
+      </section>
+
+      <section>
+        <h2>Transiciones</h2>
+        <p>Forma animar los cambios de las propiedades CSS evitando que los cambios surtan efecto de manera instantánea (o estatica)
+        </p>
+        <a href="https://developer.mozilla.org/es/docs/Web/CSS/Transiciones_de_CSS#Propiedades_que_pueden_ser_animadas" target="_blank">Propiedades Animables</a>
+        <a href="http://html5please.com/#transitions" target="_blank">HTML Please</a>
+        <a href="http://caniuse.com/#search=transitions" target="_blank">Can I Use?</a>
+      </section>
+      
+      <section>
+        <h3>transition-property</h3>
+        <p>Nombres/s de las propiedades CSS a las que deberían aplicarse las transiciones.</p>
+      </section>
+
+      <section>
+        <h3>transition-duration</h3>
+        <p>Duración en la que sucederán las transiciones. Puede ser unica o multiple.</p>
+      </section>
+
+      <section>
+        <h3>transition-timing-function</h3>
+        <p>Especifica la curva cúbica <a href="https://es.wikipedia.org/wiki/Curva_de_B%C3%A9zier" target="_blank">bézier</a> que se usa para definir cómo se computan los valores intermedios para las propiedades.</p>
+        <ul>
+          <li>cubic-bezier</li>
+          <li>ease</li>
+          <li>linear</li>
+          <li>ease-in</li>
+          <li>ease-out</li>
+          <li>ease-in-out</li>
+          <li>step</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>transition-delay</h3>
+        <p>Define el tiempo de espera entre el momento en que se cambia una propiedad y el inicio de la transición.</p>
+      </section>
+
+      <section>
+        <h3>Sinxtaxis</h3>
+        <p>
+          <i>
+            transition: [transition-property] [transition-duration] [transition-timing-function] [transition-delay];
+          </i>
+        </p>
+        <pre>
+          <code>
+            div {
+              position: relative;
+              transition-property: font-size;
+              transition-duration: 4s;
+              transition-delay: 2s;
+              font-size: 14px;
+            }
+
+            div:hover {
+              transition-property: font-size;
+              transition-duration: 4s;
+              transition-delay: 2s;
+              font-size: 36px;
+            }
+
+            .circle {
+              transition: background-color 0.5s ease;
+              background-color: red;
+            }
+
+            .circle:hover {
+              background-color: green;
+            }
+          </code>
+        </pre>
+        <a href="http://codepen.io/ianaya89/pen/mJjyoV" target="_blank">Live Demo</a>
+      </section>
+
+      <section>
+        <h2>Animaciones</h2>
+        <p>
+          Permiten animar la transición entre un estilo CSS y otro usando dos componentes: un estilo que describe la animación y un conjunto de fotogramas(keyframe) que indican su estado inicial y final (e intermedios).
+        </p>
+        <hr>
+        <a href="http://html5please.com/#animation" target="_blank">HTML Please</a>
+        <br>
+        <a href="http://caniuse.com/#search=animation" target="_blank">Can I Use?</a>
+      </section> 
+
+      <section>
+        <h3>animation-name</h3>
+        <p>
+          Especifica el nombre de la regla @keyframes que describe los fotogramas de la animación.
+        </p>
+      </section>
+
+      <section>
+        <h3>animation-duration</h3>
+        <p>
+          Indica la cantidad de tiempo que la animación consume en completar su ciclo (duración).
+        </p>
+      </section>
+
+      <section>
+        <h3>animation-timing-function</h3>
+        <p>
+          Indica el ritmo de la animación estableciendo curvas de aceleración.
+        </p>
+      </section>
+
+      <section>
+        <h3>animation-delay</h3>
+        <p>
+          Tiempo de retardo entre el momento en que el elemento se carga y el comienzo de la secuencia de la animación.
+        </p>
+      </section>
+
+      <section>
+        <h3>animation-iteration-count</h3>
+        <p>
+          El número de veces que se repite (Puede ser infinita).
+        </p>
+      </section>
+
+      <section>
+        <h3>animation-direction</h3>
+        <p>
+          Indica si la animación debe retroceder hasta el fotograma de inicio al finalizar la secuencia o si debe comenzar desde el principio al llegar al final.
+        </p>
+      </section>
+
+      <section>
+        <h3>animation-fill-mode</h3>
+        <p>
+          Especifica qué valores tendrán las propiedades después de finalizar la animación.
+        </p>
+      </section>
+
+      <section>
+        <h3>animation-play-state</h3>
+        <p>
+          Permite pausar y reanudar la secuencia de la animación.
+        </p>
+      </section>
+
+      <section>
+        <h3>Sinxtaxis</h3>
+        <pre>
+          <code>
+            body {
+              background: #f3f3f3;
+              color: #3d3d3d;
+              padding: 20px;
+            }
+
+            h1 {
+              animation-duration: 3s;
+              animation-name: slidein;
+            }
+
+            @keyframes slidein {
+              from {
+                margin-left: 100%;
+                width: 300%
+              }
+
+              to {
+                margin-left: 0%;
+                width: 100%;
+              }
+            }
+          </code>
+        </pre>
+        <a href="http://codepen.io/ianaya89/pen/yNqNXQ" target="_blank">Live Demo</a>
+      </section>
+
+      <section>
+        <h2>Custom Fonts</h2>
+        <p>
+          <i>@font-face</i> permite especificar fuentes online para visualizar en sus páginas web (elimina la necesidad de depender del numero limitado de fuentes de usuarios instaladas en sus computadoras).
+        </p>
+        <hr>
+        <a href="http://html5please.com/#@font-face" target="_blank">HTML Please</a>
+        <br>
+        <a href="http://caniuse.com/#search=@font-face" target="_blank">Can I Use?</a>
+      </section>
+
+      <section>
+        <h3>font-family</h3>
+        <p>Nombre de la fuente.</p>
+      </section>
+
+      <section>
+        <h3>src</h3>
+        <p>Dirección URL para la ubicación remota del archivo de fuente (Tambien puede ser local).</p>
+      </section>
+
+      <section>
+        <h3>font-weigh</h3>
+        <p>Valor de peso/grosor.</p>
+      </section>
+
+      <section>
+        <h3>font-style</h3>
+        <p>Valor de estlio</p>
+      </section>
+
+      <section>
+        <h3>Sinxtaxis</h3>
+        <pre>
+          <code>
+            @font-face {
+              font-family: 'My-Font';
+              src: url(''), url('');
+              [font-weight: bold];
+              [font-style: italic];
+            }
+          </code>
+        </pre>
+        <small>Usar diversos formatos: WOFF, TTF y EOT.</small>
+        <br>
+        <a href="" target="_blank">Live Demo</a><br>
+        <a href="https://www.google.com/fonts" target="_blank">Google Fonts</a>
+      </section>
+
+      <section>
+        <h2>RWD</h2>
+        <p>
+          <b>Responsive Web Design</b>: Filosofía de diseño y desarrollo cuyo objetivo es adaptar la apariencia y el contenido de las páginas web al dispositivo que se esté utilizando para visualizarla.o.
+        </p>
+        <p>
+          <b>Mobile First</b>: Diseñar pensando primero en los móviles y luego propagar nuestros diseños a pantallas mas grandes.
+        </p>
+      </section>
+
+      <section>
+        <h3>Media Queries</h3>
+        <p>
+          Es un conjunto entre un tipo de 'medio' y una/s consulta/s que limita las hojas de estilo utilizando características de este 'medio' (ancho, alto, color, etc).
+        </p>
+        <pre>
+          <code>
+            /* @media not|only mediatype and (media feature) {
+                CSS-Code;
+            } /*
+
+            @media only screen and (max-width: 500px) {
+              .div {
+                  width:100%;
+              }
+            }
+          </code>
+        </pre>
+        <a href="https://developer.mozilla.org/es/docs/CSS/Media_queries#Operadores_L.C3.B3gicos" target="_blank">Operadores</a> -
+        <a href="http://www.w3schools.com/css/css_mediatypes.asp" target="_blank">Media Types</a> - 
+        <a href="https://developer.mozilla.org/es/docs/CSS/Media_queries#Funciones_Multimedia" target="_blank">Media Features</a>
+        <br>
+        <a href="http://html5please.com/#media queries" target="_blank">HTML Please</a> - 
+        <a href="http://caniuse.com/#feat=css-media-resolution">Can I Use?</a>
+        <br>
+        <a href="http://codepen.io/ianaya89/pen/LVBpJd" target="_blank">Live Demo</a>
+      </section>
+
+      <section>
+        <h3>Flexbox</h3>
+        <p>
+          Permite colocar los elementos de una página para que se comporten de forma predecible cuando el diseño de la página debe acomodarse a diferentes tamaños de pantalla y diferentes dispositivos.
+        </p>
+        <!-- Lo que caracteriza un diseño flexible es su habilidad para alterar el ancho y alto de sus elementos para ajustarse lo mejor posible al espacio disponible en cualquier dispositivo. Un contenedor flexible expande sus elementos para rellenar el espacio libre, o los comprime para evitar que rebasen el área prevista. -->
+        <a href="http://html5please.com/#flexbox" target="_blank">HTML Please</a>
+        <br>
+        <a href="http://caniuse.com/#search=flexbox" target="_blank">Can I Use?</a>
+      </section>
+
+      <section>
+        <h3>container</h3>
+        <img src="img/container.png" style="max-width: 400px" alt="container">
+      </section>
+
+      <section>
+        <h3>container</h3>
+        <img src="img/container.png" style="max-width: 400px" alt="container">
+      </section>
+
+      <section>
+        <h3>Propiedades: container</h3>
+          <ul>
+            <li><b>display</b>: flex; /* or inline-flex */ </li>
+            <li><b>flex-direction</b>: row | row-reverse | column | column-reverse; </li>
+            <li><b>flex-wrap</b>: nowrap | wrap | wrap-reverse;</li>
+            <li><b>justify-content</b>: flex-start | flex-end | center | space-between | space-around;</li>
+            <li><b>align-items</b>: flex-start | flex-end | center | baseline | <li>stretch;</li>
+            <li><b>align-content</b>: flex-start | flex-end | center | space-between | space-around | stretch;</li>
+          </ul>
+      </section>
+
+      <section>
+        <h3>items</h3>
+        <img src="img/items.png" style="max-width: 400px" alt="container">
+      </section>
+
+      <section>
+        <h3>Propiedades: items</h3>
+          <ul>
+            <li><b>order</b>: number;</li>
+            <li><b>flex-grow</b>: number; </li>
+            <li><b>flex-shrink</b>: number;</li>
+            <li><b>flex-basis</b>: length | auto; </li>
+            <li><b>flex</b>: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]</li>
+            <li><b>align-self</b>: auto | flex-start | flex-end | center | baseline | stretch;</li>
+          </ul>
+      </section>
+
+      <section>
+        <h3>Sinxtaxis</h3>
+        <pre>
+          <code>
+            .flex-container {
+              display: flex;
+              flex-wrap: wrap;
+              flex-direction: row;
+              justify-content: space-around;
+            }
+
+            .flex-item {
+              flex-grow: 1;
+            }
+          </code>
+        </pre>
+        <a href="http://codepen.io/ianaya89/pen/ZGjQox" target="_blank">Live Demo</a>
+        <br>
+        <a href="http://codepen.io/ianaya89/pen/VLBexo" target="_blank">Live Demo II</a>
+      </section>
+
+      <section>
+        <h2>CSS Frameworks / Grid Systems</h2>
+        <ul>
+          <li><a href="http://html5please.com/#flexbox" target="_blank">Bootstrap</a></li>
+          <li><a href="http://foundation.zurb.com/" target="_blank">Foundation</a></li>
+          <li><a href="http://getskeleton.com/" target="_blank">Skeleton</a></li>
+          <li><a href="http://semantic-ui.com/" target="_blank">Semantic UI</a></li>
+        </ul>
+
+        <br>
+        <a href="http://codepen.io/ianaya89/pen/oXMbbQ" target="_blank">Live Demo</a>
+        <br>
+        <a href="http://codepen.io/ianaya89/pen/bdjEYw" target="_blank">Live Demo II</a>
+        <br>
+        <a href="http://usablica.github.io/front-end-frameworks/compare.html" target="_blank">Comparacion de Frameworks</a>
+      </section>
+
+    </div>
+  </div>
+
+  <div class="index">
+    <a href="index.html">Index</a>
+  </div>
+
+ <script src="lib/js/head.min.js"></script>
+ <script src="js/reveal.min.js"></script>
+
+ <script>
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        slideNumber: true,
+
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'fade', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+        { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+        { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+      });
+
+      Reveal.addEventListener( 'slidechanged', function( event ) {
+        var rightArrow = document.getElementsByClassName("navigate-right");
+        if(Reveal.isFirstSlide()){
+          for(var i = 0; i < rightArrow.length; i++) {
+            rightArrow[i].style.borderLeftColor = "#4D84E0";
+          }
+        }else{
+          for(var i = 0; i < rightArrow.length; i++) {
+            rightArrow[i].style.borderLeftColor = "#fff";
+          }
+        }
+      });
+
+    </script>
+
+  </body>
+  </html>
