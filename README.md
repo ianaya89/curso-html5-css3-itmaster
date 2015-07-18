@@ -1,8 +1,8 @@
 # Curso de HTML5 y CSS3 Avanzado - [IT Master][6]
 [6]:http://www.itmaster.com.ar/
 
-<p style="text-align: center">
-  <img src="img/hyc.png" alt="html5-css3" title="html5-css3"> 
+<p style="text-align: center;">
+  <img src="img/hyc.png" alt="html5-css3" title="html5-css3" /> 
 </p>
 
 Material y diapositivas del curso de HTML5 y CSS3 Avanzado de IT Master.
